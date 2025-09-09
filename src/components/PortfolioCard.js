@@ -10,7 +10,8 @@ const PortfolioCard = ({ title, subtitle, gradient, onClick }) => {
     boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
     cursor: 'pointer',
     height: '16rem',
-    transition: 'all 0.3s ease'
+    transition: 'all 0.3s ease',
+    border: '1px solid rgba(0, 0, 0, 0.05)'
   };
 
   const gradientOverlayStyle = {
@@ -19,7 +20,7 @@ const PortfolioCard = ({ title, subtitle, gradient, onClick }) => {
     left: 0,
     right: 0,
     bottom: 0,
-    background: 'linear-gradient(to bottom right, rgba(139, 69, 19, 0.1), rgba(255, 182, 193, 0.1))',
+    background: 'linear-gradient(135deg, rgba(139, 69, 19, 0.1), rgba(255, 182, 193, 0.1))',
     opacity: 0.1,
     transition: 'opacity 0.3s ease'
   };
@@ -60,17 +61,6 @@ const PortfolioCard = ({ title, subtitle, gradient, onClick }) => {
     color: '#0097B2'
   };
 
-  const borderStyle = {
-    position: 'absolute',
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    borderRadius: '1rem',
-    border: '1px solid rgba(0, 0, 0, 0.05)',
-    transition: 'all 0.3s ease'
-  };
-
   return (
     <motion.div
       style={cardStyle}
@@ -107,31 +97,15 @@ const PortfolioCard = ({ title, subtitle, gradient, onClick }) => {
       
       {/* Content */}
       <div style={contentStyle}>
-        <motion.h3 
-          className="card-title"
-          style={titleStyle}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
-        >
+        <h3 className="card-title" style={titleStyle}>
           {title}
-        </motion.h3>
-        <motion.p 
-          style={subtitleStyle}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.3 }}
-        >
+        </h3>
+        <p style={subtitleStyle}>
           {subtitle}
-        </motion.p>
+        </p>
         
         {/* Hover Arrow */}
-        <motion.div
-          className="hover-arrow"
-          style={arrowStyle}
-          initial={{ x: 10 }}
-          whileHover={{ x: 0 }}
-        >
+        <div className="hover-arrow" style={arrowStyle}>
           <svg 
             style={{ width: '100%', height: '100%' }}
             fill="none" 
@@ -145,11 +119,8 @@ const PortfolioCard = ({ title, subtitle, gradient, onClick }) => {
               d="M17 8l4 4m0 0l-4 4m4-4H3" 
             />
           </svg>
-        </motion.div>
+        </div>
       </div>
-
-      {/* Subtle Border */}
-      <div style={borderStyle} />
     </motion.div>
   );
 };
