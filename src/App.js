@@ -73,7 +73,7 @@ function App() {
 
   const containerStyle = {
     minHeight: '100vh',
-    background: 'linear-gradient(to bottom right, #FAECEC, #f5e6e6)',
+    background: 'linear-gradient(to bottom right, #2d3748, #1a202c)',
     position: 'relative'
   };
 
