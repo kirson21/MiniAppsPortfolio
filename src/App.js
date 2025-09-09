@@ -144,28 +144,18 @@ function App() {
         </motion.div>
 
         {/* Portfolio Grid */}
-        <motion.div 
-          style={gridStyle}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-        >
+        <div style={gridStyle}>
           {portfolioApps.map((app, index) => (
-            <motion.div
-              key={app.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-            >
+            <div key={app.id}>
               <PortfolioCard
                 title={app.title}
                 subtitle={app.subtitle}
                 gradient={app.gradient}
                 onClick={() => openApp(app)}
               />
-            </motion.div>
+            </div>
           ))}
-        </motion.div>
+        </div>
 
         {/* CTA Section */}
         <motion.div 
