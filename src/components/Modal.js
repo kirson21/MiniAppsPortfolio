@@ -24,7 +24,7 @@ const Modal = ({ children, onClose }) => {
     left: 0,
     right: 0,
     bottom: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.6)',
+    backgroundColor: 'rgba(0, 0, 0, 0.8)',
     backdropFilter: 'blur(4px)'
   };
 
