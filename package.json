@@ -1,7 +1,7 @@
 {
   "name": "kirson-portfolio",
   "version": "0.1.0",
-  "homepage": ".",
+  "homepage": "./",
   "dependencies": {
     "framer-motion": "^10.16.5",
     "i18next": "^23.7.6",
