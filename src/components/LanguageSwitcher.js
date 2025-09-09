@@ -10,19 +10,58 @@ const LanguageSwitcher = () => {
     i18n.changeLanguage(newLang);
   };
 
+  const buttonStyle = {
+    position: 'relative',
+    backgroundColor: 'rgba(255, 255, 255, 0.9)',
+    backdropFilter: 'blur(4px)',
+    padding: '0.5rem 1rem',
+    borderRadius: '9999px',
+    boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+    border: '1px solid rgba(0, 151, 178, 0.2)',
+    transition: 'all 0.3s ease',
+    cursor: 'pointer'
+  };
+
+  const containerStyle = {
+    display: 'flex',
+    alignItems: 'center',
+    gap: '0.5rem'
+  };
+
+  const textStyle = {
+    fontSize: '0.875rem',
+    fontWeight: '500',
+    color: '#474545'
+  };
+
+  const iconStyle = {
+    width: '1rem',
+    height: '1rem',
+    color: '#0097B2'
+  };
+
   return (
     <motion.button
       onClick={toggleLanguage}
-      className="relative bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-[#0097B2]/20 hover:border-[#0097B2]/40 transition-all duration-300"
-      whileHover={{ scale: 1.05 }}
+      style={buttonStyle}
+      whileHover={{ 
+        scale: 1.05,
+        borderColor: 'rgba(0, 151, 178, 0.4)'
+      }}
       whileTap={{ scale: 0.95 }}
+      onMouseEnter={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(0, 151, 178, 0.4)';
+      }}
+      onMouseLeave={(e) => {
+        e.currentTarget.style.borderColor = 'rgba(0, 151, 178, 0.2)';
+      }}
     >
-      <div className="flex items-center space-x-2">
-        <span className="text-sm font-medium text-[#474545]">
+      <div style={containerStyle}>
+        <span style={textStyle}>
           {i18n.language === 'en' ? '🇺🇸 EN' : '🇷🇺 RU'}
         </span>
         <svg 
-          className="w-4 h-4 text-[#0097B2]" 
+          style={iconStyle}
           fill="none" 
           stroke="currentColor" 
           viewBox="0 0 24 24"
