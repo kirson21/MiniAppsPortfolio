@@ -85,14 +85,14 @@ function App() {
   const titleStyle = {
     fontSize: '3.75rem',
     fontWeight: 'bold',
-    color: '#474545',
+    color: '#f7fafc',
     marginBottom: '1rem',
     lineHeight: '1.25'
   };
 
   const subtitleStyle = {
     fontSize: '1.125rem',
-    color: 'rgba(71, 69, 69, 0.8)',
+    color: 'rgba(247, 250, 252, 0.8)',
     maxWidth: '48rem',
     margin: '0 auto'
   };
