@@ -71,33 +71,81 @@ function App() {
     setSelectedApp(null);
   };
 
+  const containerStyle = {
+    minHeight: '100vh',
+    background: 'linear-gradient(to bottom right, #FAECEC, #f5e6e6)',
+    position: 'relative'
+  };
+
+  const headerStyle = {
+    textAlign: 'center',
+    marginBottom: '3rem'
+  };
+
+  const titleStyle = {
+    fontSize: '3.75rem',
+    fontWeight: 'bold',
+    color: '#474545',
+    marginBottom: '1rem',
+    lineHeight: '1.25'
+  };
+
+  const subtitleStyle = {
+    fontSize: '1.125rem',
+    color: 'rgba(71, 69, 69, 0.8)',
+    maxWidth: '48rem',
+    margin: '0 auto'
+  };
+
+  const gridStyle = {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+    gap: '2rem',
+    marginBottom: '4rem',
+    maxWidth: '72rem',
+    margin: '0 auto 4rem auto'
+  };
+
+  const langSwitcherStyle = {
+    position: 'absolute',
+    top: '1.5rem',
+    right: '1.5rem',
+    zIndex: 10
+  };
+
+  const contentStyle = {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '3rem 1.5rem'
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#FAECEC] to-[#f5e6e6] relative">
+    <div style={containerStyle}>
       {/* Language Switcher */}
-      <div className="absolute top-6 right-6 z-10">
+      <div style={langSwitcherStyle}>
         <LanguageSwitcher />
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto px-6 py-12">
+      <div style={contentStyle}>
         {/* Header */}
         <motion.div 
-          className="text-center mb-12"
+          style={headerStyle}
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold text-[#474545] mb-4 leading-tight">
+          <h1 style={titleStyle}>
             {t('title')}
           </h1>
-          <p className="text-lg md:text-xl text-[#474545]/80 max-w-3xl mx-auto">
+          <p style={subtitleStyle}>
             {t('subtitle')}
           </p>
         </motion.div>
 
         {/* Portfolio Grid */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16 max-w-6xl mx-auto"
+          style={gridStyle}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.3 }}
@@ -121,7 +169,7 @@ function App() {
 
         {/* CTA Section */}
         <motion.div 
-          className="text-center"
+          style={{ textAlign: 'center' }}
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
