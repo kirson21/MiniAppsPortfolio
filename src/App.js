@@ -97,6 +97,24 @@ function App() {
 
   return (
     <div style={containerStyle}>
+      <style>{`
+        .title-separator {
+          display: inline;
+        }
+        @media (max-width: 768px) {
+          .title-separator {
+            display: none;
+          }
+          .title-separator::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #667eea, transparent);
+            margin: 0.5rem auto;
+          }
+        }
+      `}</style>
       {/* Language Switcher */}
       <div style={langSwitcherStyle}>
         <LanguageSwitcher />
