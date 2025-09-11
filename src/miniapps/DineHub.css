@@ -15,7 +15,8 @@
 .dine-header {
   background: linear-gradient(135deg, #FF6B6B, #FF8E53);
   color: white;
-  padding: 20px;
+  padding: 15px 20px;
+  border-radius: 20px 20px 0 0;
 }
 
 .header-content {
