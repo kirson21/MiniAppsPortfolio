@@ -105,10 +105,11 @@
 /* Carousel Styles */
 .carousel-container {
   position: relative;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
   overflow: hidden;
   border-radius: 15px;
-  margin: 0 20px 30px;
+  margin: 0 20px 25px;
+  height: 180px;
 }
 
 .carousel {
