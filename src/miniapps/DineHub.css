@@ -665,7 +665,7 @@
   }
 
   .app-content {
-    padding-bottom: 100px; /* Extra space on mobile for reviews */
+    padding-bottom: 110px; /* Extra space on mobile to prevent menu coverage */
   }
 
   .reviews-list {
