@@ -6,13 +6,10 @@ import Modal from './components/Modal';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import CTAButton from './components/CTAButton';
 
-// Import all mini-apps
-import DanceStudio from './miniapps/DanceStudio';
-import CarRental from './miniapps/CarRental';
-import MerchStore from './miniapps/MerchStore';
-import ConcertTickets from './miniapps/ConcertTickets';
-import CalorieCounter from './miniapps/CalorieCounter';
-import ResumeAnalyzer from './miniapps/ResumeAnalyzer';
+// Import mini-apps (placeholder components for now)
+import DineHub from './miniapps/DineHub';
+import Carento from './miniapps/Carento';
+import Maxton from './miniapps/Maxton';
 
 function App() {
   const { t } = useTranslation();
