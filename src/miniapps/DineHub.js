@@ -26,11 +26,11 @@ const DineHub = () => {
   ];
 
   const categories = [
-    { id: 1, name: 'Meat', image: 'https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
-    { id: 2, name: 'Salads', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
-    { id: 3, name: 'Pasta', image: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
-    { id: 4, name: 'Fish', image: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
-    { id: 5, name: 'Drinks', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' }
+    { id: 1, name: 'Meat', image: 'https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?w=200&h=200&fit=crop' },
+    { id: 2, name: 'Salads', image: 'https://images.unsplash.com/photo-1540420773420-3366772f4999?w=200&h=200&fit=crop' },
+    { id: 3, name: 'Pasta', image: 'https://images.unsplash.com/photo-1555949258-eb67b1ef0ceb?w=200&h=200&fit=crop' },
+    { id: 4, name: 'Fish', image: 'https://images.unsplash.com/photo-1559847844-5315695dadae?w=200&h=200&fit=crop' },
+    { id: 5, name: 'Drinks', image: 'https://images.unsplash.com/photo-1437418747212-8d9709afab22?w=200&h=200&fit=crop' }
   ];
 
   const products = [
