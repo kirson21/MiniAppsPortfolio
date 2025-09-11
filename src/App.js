@@ -131,12 +131,9 @@ function App() {
         >
           <h1 style={titleStyle}>
             {t('title')}
-            <span className="title-separator"> {t('titleSeparator', '|')} </span>
-            <br />
-            {t('subtitle')}
           </h1>
           <p style={subtitleStyle}>
-            {t('mainSubtitle')}
+            {t('subtitle')}
           </p>
         </motion.div>
 
