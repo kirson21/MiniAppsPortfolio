@@ -153,11 +153,14 @@ const Carento = () => {
   ];
 
   const brands = [
-    { name: 'BMW', logo: 'https://logos-world.net/wp-content/uploads/2020/04/BMW-Logo.png' },
-    { name: 'Mercedes', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Mercedes-Logo.png' },
-    { name: 'Audi', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Audi-Logo.png' },
-    { name: 'Tesla', logo: 'https://logos-world.net/wp-content/uploads/2021/03/Tesla-Logo.png' },
-    { name: 'Volkswagen', logo: 'https://logos-world.net/wp-content/uploads/2020/04/Volkswagen-Logo.png' }
+    { name: 'Toyota', logo: 'https://cdn.worldvectorlogo.com/logos/toyota-6.svg', color: '#EB0A1E' },
+    { name: 'BMW', logo: 'https://cdn.worldvectorlogo.com/logos/bmw-9.svg', color: '#0066B2' },
+    { name: 'Mercedes', logo: 'https://cdn.worldvectorlogo.com/logos/mercedes-benz-9.svg', color: '#0F1419' },
+    { name: 'Audi', logo: 'https://cdn.worldvectorlogo.com/logos/audi-4.svg', color: '#BB0A30' },
+    { name: 'Lexus', logo: 'https://cdn.worldvectorlogo.com/logos/lexus-2.svg', color: '#0F1419' },
+    { name: 'Volkswagen', logo: 'https://cdn.worldvectorlogo.com/logos/volkswagen-vw.svg', color: '#151F6D' },
+    { name: 'Tesla', logo: 'https://cdn.worldvectorlogo.com/logos/tesla-9.svg', color: '#E31837' },
+    { name: 'Porsche', logo: 'https://cdn.worldvectorlogo.com/logos/porsche-2.svg', color: '#D5001C' }
   ];
 
   const filteredCars = cars.filter(car => {
