@@ -112,15 +112,13 @@ function App() {
           transition={{ duration: 0.8 }}
         >
           <h1 style={titleStyle}>
-            {t('title').split('\n').map((line, index) => (
-              <React.Fragment key={index}>
-                {line}
-                {index < t('title').split('\n').length - 1 && <br />}
-              </React.Fragment>
-            ))}
+            {t('title')}
+            <span className="title-separator"> {t('titleSeparator', '|')} </span>
+            <br />
+            {t('subtitle')}
           </h1>
           <p style={subtitleStyle}>
-            {t('subtitle')}
+            {t('mainSubtitle')}
           </p>
         </motion.div>
 
