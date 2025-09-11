@@ -35,7 +35,7 @@ const resources = {
     translation: {
       title: "Mini Apps Developer",
       titleSeparator: "|",
-      subtitle: "Kirson's Portfolio",
+      subtitle: "Kirson's Portfolio", 
       mainSubtitle: "Showcasing interactive applications I can deliver for businesses.",
       leaveRequest: "Оставить Заявку",
       demo: "Это демо-приложение с тестовыми данными только для ознакомления.",
