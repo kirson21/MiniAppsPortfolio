@@ -1,45 +1,383 @@
-import React from 'react';
+import React, { useState } from 'react';
+import './DineHub.css';
 
 const DineHub = () => {
-  return (
-    <div style={{
-      padding: '2rem',
-      maxWidth: '800px',
-      margin: '0 auto',
-      backgroundColor: '#f8f9fa',
-      borderRadius: '1rem',
-      minHeight: '500px',
-      display: 'flex',
-      alignItems: 'center',
-      justifyContent: 'center',
-      flexDirection: 'column',
-      textAlign: 'center'
-    }}>
-      <h2 style={{
-        fontSize: '2rem',
-        fontWeight: 'bold',
-        color: '#474545',
-        marginBottom: '1rem'
-      }}>
-        DineHub - Food Delivery App
-      </h2>
-      <p style={{
-        color: '#666',
-        fontSize: '1.1rem',
-        marginBottom: '2rem'
-      }}>
-        React Native mobile application for food delivery
-      </p>
-      <div style={{
-        padding: '3rem',
-        backgroundColor: '#fff',
-        borderRadius: '0.5rem',
-        boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-      }}>
-        <p style={{ color: '#888', fontStyle: 'italic' }}>
-          Ready-made app will be inserted here
-        </p>
+  const [activeTab, setActiveTab] = useState('home');
+  const [cart, setCart] = useState([]);
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  // Mock data
+  const carousel = [
+    {
+      id: 1,
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=400&h=250&fit=crop',
+      title: 'Delicious Burgers'
+    },
+    {
+      id: 2,
+      image: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400&h=250&fit=crop',
+      title: 'Fresh Pancakes'
+    },
+    {
+      id: 3,
+      image: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400&h=250&fit=crop',
+      title: 'Healthy Salads'
+    }
+  ];
+
+  const categories = [
+    { id: 1, name: 'Burgers', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=90&h=90&fit=crop' },
+    { id: 2, name: 'Pizza', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=90&h=90&fit=crop' },
+    { id: 3, name: 'Sushi', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=90&h=90&fit=crop' },
+    { id: 4, name: 'Desserts', image: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=90&h=90&fit=crop' },
+    { id: 5, name: 'Drinks', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=90&h=90&fit=crop' }
+  ];
+
+  const products = [
+    {
+      id: 1,
+      name: 'Classic Burger',
+      price: 12.99,
+      image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=200&h=150&fit=crop',
+      rating: 4.5,
+      description: 'Juicy beef patty with fresh vegetables',
+      category: 'Burgers',
+      is_recommended: true
+    },
+    {
+      id: 2,
+      name: 'Margherita Pizza',
+      price: 14.99,
+      image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=200&h=150&fit=crop',
+      rating: 4.8,
+      description: 'Fresh mozzarella, tomatoes, and basil',
+      category: 'Pizza',
+      is_recommended: true
+    },
+    {
+      id: 3,
+      name: 'California Roll',
+      price: 8.99,
+      image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=200&h=150&fit=crop',
+      rating: 4.7,
+      description: 'Fresh avocado, cucumber, and crab',
+      category: 'Sushi',
+      is_recommended: true
+    },
+    {
+      id: 4,
+      name: 'Chocolate Cake',
+      price: 6.99,
+      image: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=200&h=150&fit=crop',
+      rating: 4.9,
+      description: 'Rich chocolate cake with layers',
+      category: 'Desserts',
+      is_recommended: false
+    }
+  ];
+
+  const reviews = [
+    {
+      id: 1,
+      name: 'Sarah Johnson',
+      rating: 5,
+      comment: 'Amazing food quality and fast delivery! The burgers are absolutely delicious.',
+      avatar: 'https://images.unsplash.com/photo-1494790108755-2616b612b832?w=50&h=50&fit=crop&crop=face'
+    },
+    {
+      id: 2,
+      name: 'Mike Chen',
+      rating: 4,
+      comment: 'Great variety and excellent customer service. My go-to food delivery app!',
+      avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=50&h=50&fit=crop&crop=face'
+    },
+    {
+      id: 3,
+      name: 'Emma Wilson',
+      rating: 5,
+      comment: 'Fresh ingredients and perfect packaging. Highly recommended!',
+      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=50&h=50&fit=crop&crop=face'
+    }
+  ];
+
+  const recommended = products.filter(p => p.is_recommended);
+
+  const addToCart = (product) => {
+    setCart(prev => {
+      const existing = prev.find(item => item.id === product.id);
+      if (existing) {
+        return prev.map(item => 
+          item.id === product.id 
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+      return [...prev, { ...product, quantity: 1 }];
+    });
+  };
+
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>
+        ★
+      </span>
+    ));
+  };
+
+  const renderHeader = () => (
+    <div className="dine-header">
+      <div className="header-content">
+        <div className="user-info">
+          <img 
+            src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=40&h=40&fit=crop&crop=face"
+            alt="User"
+            className="user-avatar"
+          />
+          <div>
+            <p className="greeting">Good Morning!</p>
+            <p className="username">John Doe</p>
+          </div>
+        </div>
+        <div className="header-actions">
+          <button className="notification-btn">
+            🔔
+            <span className="notification-badge">3</span>
+          </button>
+          <button className="cart-btn">
+            🛒
+            {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+          </button>
+        </div>
       </div>
+    </div>
+  );
+
+  const renderCarousel = () => (
+    <div className="carousel-container">
+      <div className="carousel" style={{ transform: `translateX(-${currentSlide * 100}%)` }}>
+        {carousel.map((item, index) => (
+          <div key={item.id} className="carousel-slide">
+            <img src={item.image} alt={item.title} />
+            <div className="carousel-overlay">
+              <h3>{item.title}</h3>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="carousel-indicators">
+        {carousel.map((_, index) => (
+          <button
+            key={index}
+            className={`indicator ${index === currentSlide ? 'active' : ''}`}
+            onClick={() => setCurrentSlide(index)}
+          />
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderCategories = () => (
+    <div className="section">
+      <div className="section-header">
+        <h2>We Offer</h2>
+        <button className="see-all">See All</button>
+      </div>
+      <div className="categories-list">
+        {categories.map(category => (
+          <div key={category.id} className="category-item">
+            <img src={category.image} alt={category.name} />
+            <span>{category.name}</span>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderRecommended = () => (
+    <div className="section">
+      <div className="section-header">
+        <h2>Recommended for You</h2>
+      </div>
+      <div className="products-list">
+        {recommended.map(product => (
+          <div key={product.id} className="product-card">
+            <img src={product.image} alt={product.name} />
+            <div className="product-info">
+              <h3>{product.name}</h3>
+              <p className="product-description">{product.description}</p>
+              <div className="product-rating">
+                {renderStars(Math.floor(product.rating))}
+                <span className="rating-text">({product.rating})</span>
+              </div>
+              <div className="product-footer">
+                <span className="price">${product.price}</span>
+                <button 
+                  className="add-btn"
+                  onClick={() => addToCart(product)}
+                >
+                  Add +
+                </button>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderReviews = () => (
+    <div className="section">
+      <div className="section-header">
+        <h2>Our Happy Clients Say</h2>
+        <button className="see-all">See All</button>
+      </div>
+      <div className="reviews-list">
+        {reviews.map(review => (
+          <div key={review.id} className="review-card">
+            <div className="review-header">
+              <img src={review.avatar} alt={review.name} />
+              <div>
+                <h4>{review.name}</h4>
+                <div className="review-rating">
+                  {renderStars(review.rating)}
+                </div>
+              </div>
+            </div>
+            <p className="review-comment">"{review.comment}"</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+
+  const renderTabContent = () => {
+    switch (activeTab) {
+      case 'home':
+        return (
+          <div className="tab-content">
+            {renderCarousel()}
+            {renderCategories()}
+            {renderRecommended()}
+            {renderReviews()}
+          </div>
+        );
+      case 'menu':
+        return (
+          <div className="tab-content">
+            <h2>Menu</h2>
+            <div className="products-grid">
+              {products.map(product => (
+                <div key={product.id} className="product-card">
+                  <img src={product.image} alt={product.name} />
+                  <div className="product-info">
+                    <h3>{product.name}</h3>
+                    <p className="product-description">{product.description}</p>
+                    <div className="product-rating">
+                      {renderStars(Math.floor(product.rating))}
+                      <span className="rating-text">({product.rating})</span>
+                    </div>
+                    <div className="product-footer">
+                      <span className="price">${product.price}</span>
+                      <button 
+                        className="add-btn"
+                        onClick={() => addToCart(product)}
+                      >
+                        Add +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        );
+      case 'favorites':
+        return (
+          <div className="tab-content">
+            <h2>Favorites</h2>
+            <p className="empty-state">❤️ Your favorite items will appear here</p>
+          </div>
+        );
+      case 'orders':
+        return (
+          <div className="tab-content">
+            <h2>Orders</h2>
+            <div className="order-card">
+              <h3>Recent Order #12345</h3>
+              <p>2x Classic Burger, 1x Margherita Pizza</p>
+              <p className="order-status">Status: <span className="delivered">Delivered</span></p>
+              <p className="order-total">Total: $40.97</p>
+            </div>
+          </div>
+        );
+      case 'profile':
+        return (
+          <div className="tab-content">
+            <h2>Profile</h2>
+            <div className="profile-info">
+              <img 
+                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face"
+                alt="Profile"
+                className="profile-avatar"
+              />
+              <h3>John Doe</h3>
+              <p>john.doe@email.com</p>
+              <p>📍 123 Food Street, Taste City</p>
+            </div>
+          </div>
+        );
+      default:
+        return null;
+    }
+  };
+
+  const renderBottomNav = () => (
+    <div className="bottom-nav">
+      <button 
+        className={`nav-item ${activeTab === 'home' ? 'active' : ''}`}
+        onClick={() => setActiveTab('home')}
+      >
+        <span className="nav-icon">🏠</span>
+        <span className="nav-label">Home</span>
+      </button>
+      <button 
+        className={`nav-item ${activeTab === 'menu' ? 'active' : ''}`}
+        onClick={() => setActiveTab('menu')}
+      >
+        <span className="nav-icon">📋</span>
+        <span className="nav-label">Menu</span>
+      </button>
+      <button 
+        className={`nav-item ${activeTab === 'favorites' ? 'active' : ''}`}
+        onClick={() => setActiveTab('favorites')}
+      >
+        <span className="nav-icon">❤️</span>
+        <span className="nav-label">Favorites</span>
+      </button>
+      <button 
+        className={`nav-item ${activeTab === 'orders' ? 'active' : ''}`}
+        onClick={() => setActiveTab('orders')}
+      >
+        <span className="nav-icon">📦</span>
+        <span className="nav-label">Orders</span>
+      </button>
+      <button 
+        className={`nav-item ${activeTab === 'profile' ? 'active' : ''}`}
+        onClick={() => setActiveTab('profile')}
+      >
+        <span className="nav-icon">👤</span>
+        <span className="nav-label">Profile</span>
+      </button>
+    </div>
+  );
+
+  return (
+    <div className="dinehub-app">
+      {renderHeader()}
+      <div className="app-content">
+        {renderTabContent()}
+      </div>
+      {renderBottomNav()}
     </div>
   );
 };
