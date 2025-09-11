@@ -335,16 +335,16 @@ const Carento = () => {
           {brands.map(brand => (
             <div key={brand.name} className="brand-item">
               <div className="brand-logo">
-                <span>{brand.name.charAt(0)}</span>
+                <img src={brand.logo} alt={brand.name} />
               </div>
             </div>
           ))}
         </div>
-        <div className="brands-row">
+        <div className="brands-row brands-row-reverse">
           {brands.map(brand => (
             <div key={`${brand.name}-2`} className="brand-item">
               <div className="brand-logo">
-                <span>{brand.name.charAt(0)}</span>
+                <img src={brand.logo} alt={brand.name} />
               </div>
             </div>
           ))}
