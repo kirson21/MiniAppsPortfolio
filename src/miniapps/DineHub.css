@@ -139,9 +139,21 @@
 }
 
 .carousel-overlay h3 {
-  margin: 0;
+  margin: 0 0 10px 0;
   font-size: 18px;
   font-weight: 600;
+}
+
+.discount-info p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.discount {
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFD700;
 }
 
 .carousel-indicators {
