@@ -17,46 +17,25 @@ function App() {
 
   const portfolioApps = [
     {
-      id: 'danceStudio',
-      title: t('danceStudio.title'),
-      subtitle: t('danceStudio.subtitle'),
-      component: DanceStudio,
-      gradient: 'from-purple-400 to-pink-400'
-    },
-    {
-      id: 'carRental',
-      title: t('carRental.title'),
-      subtitle: t('carRental.subtitle'),
-      component: CarRental,
-      gradient: 'from-blue-400 to-cyan-400'
-    },
-    {
-      id: 'merchStore',
-      title: t('merchStore.title'),
-      subtitle: t('merchStore.subtitle'),
-      component: MerchStore,
-      gradient: 'from-green-400 to-emerald-400'
-    },
-    {
-      id: 'concertTickets',
-      title: t('concertTickets.title'),
-      subtitle: t('concertTickets.subtitle'),
-      component: ConcertTickets,
+      id: 'dineHub',
+      title: t('dineHub.title'),
+      subtitle: t('dineHub.subtitle'),
+      component: DineHub,
       gradient: 'from-orange-400 to-red-400'
     },
     {
-      id: 'calorieCounter',
-      title: t('calorieCounter.title'),
-      subtitle: t('calorieCounter.subtitle'),
-      component: CalorieCounter,
-      gradient: 'from-yellow-400 to-orange-400'
+      id: 'carento',
+      title: t('carento.title'),
+      subtitle: t('carento.subtitle'),
+      component: Carento,
+      gradient: 'from-blue-400 to-cyan-400'
     },
     {
-      id: 'resumeAnalyzer',
-      title: t('resumeAnalyzer.title'),
-      subtitle: t('resumeAnalyzer.subtitle'),
-      component: ResumeAnalyzer,
-      gradient: 'from-indigo-400 to-purple-400'
+      id: 'maxton',
+      title: t('maxton.title'),
+      subtitle: t('maxton.subtitle'),
+      component: Maxton,
+      gradient: 'from-purple-400 to-indigo-400'
     }
   ];
 
