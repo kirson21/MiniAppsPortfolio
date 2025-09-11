@@ -34,7 +34,7 @@ const resources = {
   ru: {
     translation: {
       title: "Mini Apps Developer",
-      titleSeparator: "|", 
+      titleSeparator: "|",
       subtitle: "Kirson's Portfolio",
       mainSubtitle: "Showcasing interactive applications I can deliver for businesses.",
       leaveRequest: "Оставить Заявку",
