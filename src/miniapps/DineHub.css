@@ -354,9 +354,9 @@
   background: #FF6B6B;
   color: white;
   border: none;
-  border-radius: 8px;
-  padding: 6px 12px;
-  font-size: 12px;
+  border-radius: 6px;
+  padding: 4px 8px; /* Made smaller */
+  font-size: 11px; /* Made smaller */
   cursor: pointer;
   transition: all 0.3s ease;
 }
