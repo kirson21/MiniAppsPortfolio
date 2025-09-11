@@ -479,18 +479,17 @@
 
 /* Bottom Navigation */
 .bottom-nav {
-  position: fixed;
+  position: absolute;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 400px;
-  max-width: 100%;
+  left: 0;
+  right: 0;
   background: white;
   display: flex;
   border-top: 1px solid #eee;
-  border-radius: 20px 20px 0 0;
+  border-radius: 0 0 20px 20px;
   padding: 10px 0;
   box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 10;
 }
 
 .nav-item {
