@@ -136,6 +136,18 @@ const DineHub = () => {
     });
   };
 
+  const updateCartQuantity = (productId, change) => {
+    setCart(prev => {
+      return prev.map(item => {
+        if (item.id === productId) {
+          const newQuantity = item.quantity + change;
+          return newQuantity > 0 ? { ...item, quantity: newQuantity } : null;
+        }
+        return item;
+      }).filter(Boolean);
+    });
+  };
+
   const renderStars = (rating) => {
     return Array.from({ length: 5 }, (_, i) => (
       <span key={i} className={`star ${i < rating ? 'filled' : ''}`}>
