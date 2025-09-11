@@ -175,9 +175,12 @@ const DineHub = () => {
             🔔
             <span className="notification-badge">3</span>
           </button>
-          <button className="cart-btn">
+          <button 
+            className="cart-btn"
+            onClick={() => setActiveTab('cart')}
+          >
             🛒
-            {cart.length > 0 && <span className="cart-badge">{cart.length}</span>}
+            {cart.length > 0 && <span className="cart-badge">{cart.reduce((sum, item) => sum + item.quantity, 0)}</span>}
           </button>
         </div>
       </div>
