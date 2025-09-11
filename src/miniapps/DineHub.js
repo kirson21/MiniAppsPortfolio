@@ -195,6 +195,12 @@ const DineHub = () => {
             <img src={item.image} alt={item.title} />
             <div className="carousel-overlay">
               <h3>{item.title}</h3>
+              {index === 2 && (
+                <div className="discount-info">
+                  <p>And Save Up To</p>
+                  <span className="discount">35%</span>
+                </div>
+              )}
             </div>
           </div>
         ))}
