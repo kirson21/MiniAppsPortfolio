@@ -97,11 +97,11 @@
 .app-content {
   flex: 1;
   overflow-y: auto;
-  padding-bottom: 80px; /* Increased bottom padding for mobile reviews visibility */
+  padding-bottom: 90px; /* Increased bottom padding to prevent menu coverage */
 }
 
 .tab-content {
-  padding: 20px 0;
+  padding: 20px 0 20px 0; /* Added bottom padding */
 }
 
 /* Carousel Styles */
