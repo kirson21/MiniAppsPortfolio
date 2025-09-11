@@ -259,6 +259,13 @@
 
 /* Products */
 .products-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 0 20px;
+}
+
+.products-list-horizontal {
   display: flex;
   gap: 15px;
   padding: 0 20px;
@@ -267,7 +274,7 @@
   -ms-overflow-style: none;
 }
 
-.products-list::-webkit-scrollbar {
+.products-list-horizontal::-webkit-scrollbar {
   display: none;
 }
 
