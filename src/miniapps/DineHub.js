@@ -306,7 +306,7 @@ const DineHub = () => {
         return (
           <div className="tab-content">
             <h2>Menu</h2>
-            <div className="products-grid">
+            <div className="products-list">
               {products.map(product => (
                 <div key={product.id} className="product-card">
                   <img src={product.image} alt={product.name} />
