@@ -153,14 +153,14 @@ const Carento = () => {
   ];
 
   const brands = [
-    { name: 'Toyota', logo: 'https://cdn.worldvectorlogo.com/logos/toyota-6.svg', color: '#EB0A1E' },
-    { name: 'BMW', logo: 'https://cdn.worldvectorlogo.com/logos/bmw-9.svg', color: '#0066B2' },
-    { name: 'Mercedes', logo: 'https://cdn.worldvectorlogo.com/logos/mercedes-benz-9.svg', color: '#0F1419' },
-    { name: 'Audi', logo: 'https://cdn.worldvectorlogo.com/logos/audi-4.svg', color: '#BB0A30' },
-    { name: 'Lexus', logo: 'https://cdn.worldvectorlogo.com/logos/lexus-2.svg', color: '#0F1419' },
-    { name: 'Volkswagen', logo: 'https://cdn.worldvectorlogo.com/logos/volkswagen-vw.svg', color: '#151F6D' },
-    { name: 'Tesla', logo: 'https://cdn.worldvectorlogo.com/logos/tesla-9.svg', color: '#E31837' },
-    { name: 'Porsche', logo: 'https://cdn.worldvectorlogo.com/logos/porsche-2.svg', color: '#D5001C' }
+    { name: 'Toyota', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e7/Toyota.svg', color: '#EB0A1E' },
+    { name: 'BMW', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg', color: '#0066B2' },
+    { name: 'Mercedes', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg', color: '#0F1419' },
+    { name: 'Audi', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg', color: '#BB0A30' },
+    { name: 'Lexus', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Lexus_logo.svg', color: '#0F1419' },
+    { name: 'Volkswagen', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg', color: '#151F6D' },
+    { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg', color: '#E31837' },
+    { name: 'Porsche', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Porsche_logo.svg', color: '#D5001C' }
   ];
 
   const filteredCars = cars.filter(car => {
