@@ -33,8 +33,10 @@ const resources = {
   },
   ru: {
     translation: {
-      title: "Разработчик Мини-Приложений |\nПортфолио Кирсона",
-      subtitle: "Демонстрация интерактивных приложений, которые я могу создать для бизнеса",
+      title: "Mini Apps Developer",
+      titleSeparator: "|",
+      subtitle: "Kirson's Portfolio",
+      mainSubtitle: "Showcasing interactive applications I can deliver for businesses.",
       leaveRequest: "Оставить Заявку",
       demo: "Это демо-приложение с тестовыми данными только для ознакомления.",
       close: "Закрыть",
