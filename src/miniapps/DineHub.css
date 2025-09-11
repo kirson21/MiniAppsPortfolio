@@ -278,20 +278,13 @@
   display: none;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  padding: 0 20px;
-}
-
 .product-card {
   background: white;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  min-width: 160px;
   transition: transform 0.3s ease;
+  width: 100%;
 }
 
 .product-card:hover {
