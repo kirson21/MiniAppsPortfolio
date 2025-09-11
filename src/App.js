@@ -133,6 +133,57 @@ function App() {
           ))}
         </div>
 
+        {/* f01i.ai Startup Card */}
+        <motion.div 
+          style={{ 
+            marginBottom: '3rem',
+            display: 'flex',
+            justifyContent: 'center'
+          }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
+          <div
+            style={{
+              maxWidth: '600px',
+              backgroundColor: 'rgba(255, 255, 255, 0.95)',
+              borderRadius: '1rem',
+              padding: '2rem',
+              boxShadow: '0 20px 40px rgba(0, 151, 178, 0.2)',
+              border: '2px solid rgba(0, 151, 178, 0.3)',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease'
+            }}
+            onClick={() => window.open('https://www.f01i.ai', '_blank')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = 'scale(1.02)';
+              e.currentTarget.style.boxShadow = '0 25px 50px rgba(0, 151, 178, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = 'scale(1)';
+              e.currentTarget.style.boxShadow = '0 20px 40px rgba(0, 151, 178, 0.2)';
+            }}
+          >
+            <h3 style={{
+              fontSize: '1.5rem',
+              fontWeight: 'bold',
+              color: '#0097B2',
+              marginBottom: '1rem',
+              textAlign: 'center'
+            }}>
+              {t('f01iAi.title')}
+            </h3>
+            <p style={{
+              color: '#474545',
+              lineHeight: '1.6',
+              fontSize: '0.95rem'
+            }}>
+              {t('f01iAi.subtitle')}
+            </p>
+          </div>
+        </motion.div>
+
         {/* CTA Section */}
         <motion.div 
           style={{ textAlign: 'center' }}
