@@ -4,8 +4,8 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      title: "Mini Apps Developer |\nKirson's Portfolio",
-      subtitle: "Showcasing interactive applications I can deliver for businesses",
+      title: "Web / Mobile Apps Developer",
+      subtitle: "Showcasing interactive examples of applications I can deliver for businesses.",
       leaveRequest: "Leave a Request",
       demo: "This is a demo app with mock data for testing purposes only.",
       close: "Close",
