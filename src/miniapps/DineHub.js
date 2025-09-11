@@ -26,11 +26,11 @@ const DineHub = () => {
   ];
 
   const categories = [
-    { id: 1, name: 'Burgers', image: 'https://images.unsplash.com/photo-1571091718767-18b5b1457add?w=90&h=90&fit=crop' },
-    { id: 2, name: 'Pizza', image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=90&h=90&fit=crop' },
-    { id: 3, name: 'Sushi', image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=90&h=90&fit=crop' },
-    { id: 4, name: 'Desserts', image: 'https://images.unsplash.com/photo-1551782450-17144efb9c50?w=90&h=90&fit=crop' },
-    { id: 5, name: 'Drinks', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?w=90&h=90&fit=crop' }
+    { id: 1, name: 'Meat', image: 'https://images.unsplash.com/photo-1448043552756-e747b7a2b2b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
+    { id: 2, name: 'Salads', image: 'https://images.unsplash.com/photo-1512621776951-a57141f2eefd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
+    { id: 3, name: 'Pasta', image: 'https://images.unsplash.com/photo-1621996346565-e3dbc353d2e5?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
+    { id: 4, name: 'Fish', image: 'https://images.unsplash.com/photo-1544943910-4c1dc44aab44?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' },
+    { id: 5, name: 'Drinks', image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80' }
   ];
 
   const products = [
