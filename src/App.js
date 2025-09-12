@@ -10,6 +10,7 @@ import CTAButton from './components/CTAButton';
 import DineHub from './miniapps/DineHub';
 import Carento from './miniapps/Carento';
 import Maxton from './miniapps/Maxton';
+import './App.css';
 
 function App() {
   const { t } = useTranslation();
