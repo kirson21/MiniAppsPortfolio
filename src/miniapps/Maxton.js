@@ -353,7 +353,247 @@ const Maxton = () => {
     </div>
   );
 
-  const renderWelcomeCard = () => (
+  const renderContent = () => {
+    switch (activeSection) {
+      case 'profile':
+        return renderProfilePage();
+      case 'settings':
+        return renderSettingsPage();
+      case 'notifications':
+        return renderNotificationsPage();
+      default:
+        return renderDashboard();
+    }
+  };
+
+  const renderProfilePage = () => (
+    <div className="profile-page">
+      <div className="page-header">
+        <button className="back-btn" onClick={() => setActiveSection('dashboard')}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+          Back to Dashboard
+        </button>
+        <h1>User Profile</h1>
+      </div>
+      
+      <div className="profile-content">
+        <div className="profile-card">
+          <div className="profile-avatar-section">
+            <img 
+              src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=120&h=120&fit=crop&crop=face"
+              alt="User"
+              className="profile-avatar-large"
+            />
+            <div className="profile-info">
+              <h2>John Anderson</h2>
+              <p>Administrator</p>
+              <span className="profile-badge">Premium User</span>
+            </div>
+            <button className="edit-profile-btn">Edit Profile</button>
+          </div>
+          
+          <div className="profile-details">
+            <div className="detail-row">
+              <label>Email:</label>
+              <span>john.anderson@company.com</span>
+            </div>
+            <div className="detail-row">
+              <label>Phone:</label>
+              <span>+1 (555) 123-4567</span>
+            </div>
+            <div className="detail-row">
+              <label>Department:</label>
+              <span>IT Administration</span>
+            </div>
+            <div className="detail-row">
+              <label>Join Date:</label>
+              <span>January 15, 2022</span>
+            </div>
+            <div className="detail-row">
+              <label>Last Login:</label>
+              <span>Today at 9:30 AM</span>
+            </div>
+          </div>
+        </div>
+        
+        <div className="activity-card">
+          <h3>Recent Activity</h3>
+          <div className="activity-list">
+            <div className="activity-item">
+              <div className="activity-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                </svg>
+              </div>
+              <div className="activity-content">
+                <p>Updated system settings</p>
+                <span>2 hours ago</span>
+              </div>
+            </div>
+            <div className="activity-item">
+              <div className="activity-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                </svg>
+              </div>
+              <div className="activity-content">
+                <p>Generated monthly report</p>
+                <span>1 day ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderSettingsPage = () => (
+    <div className="settings-page">
+      <div className="page-header">
+        <button className="back-btn" onClick={() => setActiveSection('dashboard')}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+          Back to Dashboard
+        </button>
+        <h1>Account Settings</h1>
+      </div>
+      
+      <div className="settings-content">
+        <div className="settings-section">
+          <h3>Personal Information</h3>
+          <div className="setting-item">
+            <label>Display Name</label>
+            <input type="text" defaultValue="John Anderson" />
+          </div>
+          <div className="setting-item">
+            <label>Email Address</label>
+            <input type="email" defaultValue="john.anderson@company.com" />
+          </div>
+          <div className="setting-item">
+            <label>Phone Number</label>
+            <input type="tel" defaultValue="+1 (555) 123-4567" />
+          </div>
+        </div>
+        
+        <div className="settings-section">
+          <h3>Preferences</h3>
+          <div className="setting-item">
+            <label>Theme</label>
+            <select defaultValue="light">
+              <option value="light">Light</option>
+              <option value="dark">Dark</option>
+              <option value="auto">Auto</option>
+            </select>
+          </div>
+          <div className="setting-item">
+            <label>Language</label>
+            <select defaultValue="en">
+              <option value="en">English</option>
+              <option value="es">Spanish</option>
+              <option value="fr">French</option>
+            </select>
+          </div>
+          <div className="setting-item checkbox-item">
+            <input type="checkbox" id="notifications" defaultChecked />
+            <label htmlFor="notifications">Enable Email Notifications</label>
+          </div>
+          <div className="setting-item checkbox-item">
+            <input type="checkbox" id="marketing" />
+            <label htmlFor="marketing">Receive Marketing Emails</label>
+          </div>
+        </div>
+        
+        <div className="settings-section">
+          <h3>Security</h3>
+          <div className="setting-item">
+            <label>Two-Factor Authentication</label>
+            <button className="toggle-btn enabled">Enabled</button>
+          </div>
+          <div className="setting-item">
+            <label>Password</label>
+            <button className="change-password-btn">Change Password</button>
+          </div>
+        </div>
+        
+        <div className="settings-actions">
+          <button className="save-btn">Save Changes</button>
+          <button className="cancel-btn" onClick={() => setActiveSection('dashboard')}>Cancel</button>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderNotificationsPage = () => (
+    <div className="notifications-page">
+      <div className="page-header">
+        <button className="back-btn" onClick={() => setActiveSection('dashboard')}>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+          </svg>
+          Back to Dashboard
+        </button>
+        <h1>All Notifications</h1>
+      </div>
+      
+      <div className="notifications-content">
+        <div className="notifications-list">
+          <div className="notification-item-large unread">
+            <div className="notification-icon new">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+            </div>
+            <div className="notification-content">
+              <h4>New user registration completed</h4>
+              <p>Sarah Johnson has successfully registered as a new user. Account verification pending.</p>
+              <span>2 minutes ago</span>
+            </div>
+            <button className="mark-read-btn">Mark as Read</button>
+          </div>
+          
+          <div className="notification-item-large unread">
+            <div className="notification-icon warning">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+              </svg>
+            </div>
+            <div className="notification-content">
+              <h4>Server memory usage is at 85%</h4>
+              <p>Main server memory usage has reached critical levels. Consider scaling resources.</p>
+              <span>15 minutes ago</span>
+            </div>
+            <button className="mark-read-btn">Mark as Read</button>
+          </div>
+          
+          <div className="notification-item-large">
+            <div className="notification-icon info">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+              </svg>
+            </div>
+            <div className="notification-content">
+              <h4>Weekly report is ready</h4>
+              <p>Your weekly analytics report has been generated and is ready for review.</p>
+              <span>1 hour ago</span>
+            </div>
+            <button className="view-btn">View Report</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+
+  const renderDashboard = () => (
+    <div className="dashboard-content">
+      {renderWelcomeCard()}
+      {renderAnalyticsCards()}
+      {renderChartCards()}
+      {renderBottomSection()}
+    </div>
+  );
     <div className="welcome-card">
       <div className="welcome-content">
         <div className="welcome-text">
