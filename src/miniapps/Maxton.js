@@ -1,15 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Maxton.css';
 
 const Maxton = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('dashboard');
-  const [chartData, setChartData] = useState({
-    activeUsers: 42.5,
-    totalUsers: 97.4,
-    todaysSales: 65.4,
-    growthRate: 78.4
-  });
 
   // Mock data for dashboard
   const analytics = {
