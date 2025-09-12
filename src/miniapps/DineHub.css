@@ -651,6 +651,29 @@
   transform: scale(1.05);
 }
 
+/* Mobile bottom spacing fix */
+@media (max-width: 768px) {
+  .dinehub-container {
+    padding-bottom: 120px; /* Extra space for bottom navigation */
+  }
+  
+  .reviews-section {
+    margin-bottom: 40px; /* Additional spacing for reviews */
+  }
+  
+  .popular-food-section {
+    margin-bottom: 40px; /* Additional spacing for food items */
+  }
+  
+  .bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+  }
+}
+
 /* Responsive */
 @media (max-width: 400px) {
   .dinehub-app {
