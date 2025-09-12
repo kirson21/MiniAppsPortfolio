@@ -85,12 +85,7 @@ const Modal = ({ children, onClose }) => {
   };
 
   const contentStyle = {
-    height: 'calc(90vh - 80px)',
-    overflow: 'hidden'
-  };
-
-  const contentStyleMobile = {
-    height: 'calc(100vh - 80px)',
+    height: isMobile ? 'calc(100vh - 80px)' : 'calc(90vh - 80px)',
     overflow: 'hidden'
   };
 
