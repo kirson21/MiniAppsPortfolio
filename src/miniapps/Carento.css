@@ -790,6 +790,11 @@
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
+/* Extra bottom padding for all tab content */
+.tab-content {
+  padding-bottom: 6rem;
+}
+
 .booking-card h3 {
   color: #1e293b;
   margin-bottom: 0.75rem;
