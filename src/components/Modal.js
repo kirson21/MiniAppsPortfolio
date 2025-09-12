@@ -39,6 +39,20 @@ const Modal = ({ children, onClose }) => {
     overflow: 'hidden'
   };
 
+  const modalStyleMobile = {
+    position: 'relative',
+    width: '100vw',
+    height: '100vh',
+    maxWidth: 'none',
+    maxHeight: 'none',
+    backgroundColor: 'white',
+    borderRadius: '0',
+    boxShadow: 'none',
+    overflow: 'hidden'
+  };
+
+  const isMobile = window.innerWidth <= 768;
+
   const demoNoticeStyle = {
     background: 'linear-gradient(to right, #0097B2, #007a94)',
     color: 'white',
