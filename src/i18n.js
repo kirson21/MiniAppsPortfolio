@@ -4,7 +4,7 @@ import { initReactI18next } from 'react-i18next';
 const resources = {
   en: {
     translation: {
-      title: "Web / Mobile Apps Development",
+      title: "Web / Mini / Mobile Apps Development",
       subtitle: "Showcasing simple interactive examples of applications I can deliver for businesses.",
       leaveRequest: "Leave a Request",
       demo: "This is a demo app with mock data for testing purposes only.",
