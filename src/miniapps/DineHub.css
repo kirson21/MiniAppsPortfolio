@@ -654,15 +654,15 @@
 /* Mobile bottom spacing fix */
 @media (max-width: 768px) {
   .dinehub-container {
-    padding-bottom: 120px; /* Extra space for bottom navigation */
+    padding-bottom: 160px !important; /* Extra space for bottom navigation */
   }
   
   .reviews-section {
-    margin-bottom: 40px; /* Additional spacing for reviews */
+    margin-bottom: 60px !important; /* Additional spacing for reviews */
   }
   
   .popular-food-section {
-    margin-bottom: 40px; /* Additional spacing for food items */
+    margin-bottom: 60px !important; /* Additional spacing for food items */
   }
   
   .bottom-nav {
@@ -671,6 +671,15 @@
     left: 0;
     right: 0;
     z-index: 100;
+  }
+  
+  /* Additional fix for content overlap */
+  .dinehub-app {
+    padding-bottom: 160px !important;
+  }
+  
+  .reviews-container {
+    padding-bottom: 80px !important;
   }
 }
 
