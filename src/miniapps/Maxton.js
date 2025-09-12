@@ -89,14 +89,6 @@ const Maxton = () => {
     );
   };
 
-  const renderStars = (rating) => {
-    return Array.from({ length: 5 }, (_, i) => (
-      <span key={i} className={`star ${i < Math.floor(rating) ? 'filled' : ''}`}>
-        ★
-      </span>
-    ));
-  };
-
   const renderMiniChart = (type, data) => {
     switch (type) {
       case 'line':
