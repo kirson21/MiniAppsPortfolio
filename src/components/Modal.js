@@ -86,6 +86,11 @@ const Modal = ({ children, onClose }) => {
     overflow: 'hidden'
   };
 
+  const contentStyleMobile = {
+    height: 'calc(100vh - 80px)',
+    overflow: 'hidden'
+  };
+
   return (
     <motion.div
       style={backdropStyle}
