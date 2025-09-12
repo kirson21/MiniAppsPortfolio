@@ -157,7 +157,6 @@ const Carento = () => {
     { name: 'BMW', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/44/BMW.svg', color: '#0066B2' },
     { name: 'Mercedes', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/90/Mercedes-Logo.svg', color: '#0F1419' },
     { name: 'Audi', logo: 'https://upload.wikimedia.org/wikipedia/commons/9/92/Audi-Logo_2016.svg', color: '#BB0A30' },
-    { name: 'Lexus', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Lexus_logo.svg', color: '#0F1419' },
     { name: 'Volkswagen', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg', color: '#151F6D' },
     { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg', color: '#E31837' },
     { name: 'Porsche', logo: 'https://customer-assets.emergentagent.com/job_miniapps-showcase/artifacts/cuor6f9m_porsche-911-car-desktop-wallpaper-logo-png-favpng-fSPJk53AzHu5C2AG3bqtHHfjf.jpg', color: '#D5001C' }
