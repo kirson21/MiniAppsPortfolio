@@ -1078,10 +1078,7 @@ const Maxton = () => {
         
         <div className="maxton-content">
           <div className="content-wrapper">
-            {renderWelcomeCard()}
-            {renderAnalyticsCards()}
-            {renderChartCards()}
-            {renderBottomSection()}
+            {renderContent()}
           </div>
         </div>
       </div>
