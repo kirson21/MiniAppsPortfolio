@@ -1701,7 +1701,7 @@ td {
     height: 35px;
   }
   
-  /* Ensure all cards have proper contrast */
+  /* Ensure all cards have proper contrast and mobile width constraints */
   .chart-card,
   .campaign-stats,
   .social-leads,
@@ -1709,6 +1709,9 @@ td {
   .orders-table,
   .accounts-card {
     background: white !important;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0.75rem !important;
   }
   
   .chart-card h3,
@@ -1716,5 +1719,33 @@ td {
   .social-leads h3,
   .new-users h3 {
     color: #1e293b !important;
+  }
+  
+  /* Fix bottom section cards that go off screen */
+  .bottom-section {
+    grid-template-columns: 1fr;
+  }
+  
+  .bottom-left,
+  .bottom-right {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  /* Ensure content within cards doesn't overflow */
+  .accounts-card,
+  .orders-table {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .table-content {
+    overflow-x: auto;
+    max-width: 100%;
+  }
+  
+  table {
+    min-width: 280px;
+    font-size: 0.75rem;
   }
 }
