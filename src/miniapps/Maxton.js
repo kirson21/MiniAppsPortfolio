@@ -1084,6 +1084,16 @@ const Maxton = () => {
       </div>
       
       {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}></div>}
+      
+      {(profileMenuOpen || notificationsOpen) && (
+        <div 
+          className="dropdown-overlay" 
+          onClick={() => {
+            setProfileMenuOpen(false);
+            setNotificationsOpen(false);
+          }}
+        ></div>
+      )}
     </div>
   );
 };
