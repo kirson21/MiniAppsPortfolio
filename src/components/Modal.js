@@ -59,7 +59,7 @@ const Modal = ({ children, onClose }) => {
   const demoNoticeStyle = {
     background: 'linear-gradient(to right, #0097B2, #007a94)',
     color: 'white',
-    padding: '0.75rem 1.5rem',
+    padding: isMobile ? '1.5rem 1.5rem 0.75rem 1.5rem' : '1rem 1.5rem 0.75rem 1.5rem', // Extra top padding for visibility
     textAlign: 'center',
     fontSize: '0.875rem',
     fontWeight: '500'
