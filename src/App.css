@@ -1,4 +1,4 @@
-/* Mobile responsive title fixes */
+/* Mobile responsive title fixes with extra top space */
 @media (max-width: 768px) {
   .main-title {
     font-size: 1.8rem !important;
@@ -8,6 +8,7 @@
     max-width: 100%;
     word-wrap: break-word;
     hyphens: auto;
+    margin-top: 4rem !important; /* Extra space to avoid language switcher overlap */
   }
   
   .main-subtitle {
