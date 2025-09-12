@@ -160,7 +160,7 @@ const Carento = () => {
     { name: 'Lexus', logo: 'https://upload.wikimedia.org/wikipedia/commons/4/49/Lexus_logo.svg', color: '#0F1419' },
     { name: 'Volkswagen', logo: 'https://upload.wikimedia.org/wikipedia/commons/6/6d/Volkswagen_logo_2019.svg', color: '#151F6D' },
     { name: 'Tesla', logo: 'https://upload.wikimedia.org/wikipedia/commons/b/bb/Tesla_T_symbol.svg', color: '#E31837' },
-    { name: 'Porsche', logo: 'https://upload.wikimedia.org/wikipedia/commons/e/e4/Porsche_logo.svg', color: '#D5001C' }
+    { name: 'Porsche', logo: 'https://customer-assets.emergentagent.com/job_miniapps-showcase/artifacts/cuor6f9m_porsche-911-car-desktop-wallpaper-logo-png-favpng-fSPJk53AzHu5C2AG3bqtHHfjf.jpg', color: '#D5001C' }
   ];
 
   const filteredCars = cars.filter(car => {
