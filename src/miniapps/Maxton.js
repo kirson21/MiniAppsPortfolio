@@ -4,6 +4,9 @@ import './Maxton.css';
 const Maxton = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('dashboard');
+  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
   // Mock data for dashboard
   const analytics = {
