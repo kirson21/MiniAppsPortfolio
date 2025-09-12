@@ -129,10 +129,10 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 style={titleStyle}>
+          <h1 style={titleStyle} className="main-title">
             {t('title')}
           </h1>
-          <p style={subtitleStyle}>
+          <p style={subtitleStyle} className="main-subtitle">
             {t('subtitle')}
           </p>
         </motion.div>
