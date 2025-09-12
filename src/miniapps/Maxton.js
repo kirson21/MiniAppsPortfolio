@@ -594,7 +594,8 @@ const Maxton = () => {
       {renderBottomSection()}
     </div>
   );
-    <div className="welcome-card">
+
+  const renderWelcomeCard = () => (
       <div className="welcome-content">
         <div className="welcome-text">
           <div className="user-greeting">
