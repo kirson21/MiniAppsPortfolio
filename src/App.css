@@ -1,1 +1,36 @@
-/* Add any existing styles here if the file exists */
+/* Mobile responsive title fixes */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 1.8rem !important;
+    line-height: 1.2 !important;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 100%;
+    word-wrap: break-word;
+    hyphens: auto;
+  }
+  
+  .main-subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.3 !important;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 100%;
+  }
+  
+  /* Hide separator on mobile */
+  .title-separator {
+    display: none !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 1.5rem !important;
+    line-height: 1.1 !important;
+  }
+  
+  .main-subtitle {
+    font-size: 0.8rem !important;
+  }
+}
