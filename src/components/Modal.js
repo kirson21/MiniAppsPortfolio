@@ -133,7 +133,7 @@ const Modal = ({ children, onClose }) => {
         </button>
 
         {/* App Content */}
-        <div style={isMobile ? contentStyleMobile : contentStyle}>
+        <div style={contentStyle}>
           {children}
         </div>
       </motion.div>
