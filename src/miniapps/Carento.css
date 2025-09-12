@@ -964,7 +964,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .app-content {
-    padding: 0 1rem 5rem 1rem;
+    padding: 0 1rem 8rem 1rem; /* Increased bottom padding from 5rem to 8rem */
   }
 
   .search-section {
