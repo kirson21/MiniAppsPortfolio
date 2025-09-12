@@ -596,6 +596,7 @@ const Maxton = () => {
   );
 
   const renderWelcomeCard = () => (
+    <div className="welcome-card">
       <div className="welcome-content">
         <div className="welcome-text">
           <div className="user-greeting">
