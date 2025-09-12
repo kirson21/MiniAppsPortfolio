@@ -7,6 +7,9 @@ const Maxton = () => {
   const [profileMenuOpen, setProfileMenuOpen] = useState(false);
   const [notificationsOpen, setNotificationsOpen] = useState(false);
   const [searchValue, setSearchValue] = useState('');
+  const [profileMenuOpen, setProfileMenuOpen] = useState(false);
+  const [notificationsOpen, setNotificationsOpen] = useState(false);
+  const [searchValue, setSearchValue] = useState('');
 
   // Mock data for dashboard
   const analytics = {
