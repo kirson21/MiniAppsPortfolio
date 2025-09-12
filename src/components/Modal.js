@@ -31,7 +31,7 @@ const Modal = ({ children, onClose }) => {
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    padding: '1rem'
+    padding: isMobile ? '0' : '1rem'
   };
 
   const overlayStyle = {
@@ -46,28 +46,15 @@ const Modal = ({ children, onClose }) => {
 
   const modalStyle = {
     position: 'relative',
-    width: '100%',
-    maxWidth: '80rem',
-    maxHeight: '90vh',
+    width: isMobile ? '100vw' : '100%',
+    height: isMobile ? '100vh' : 'auto',
+    maxWidth: isMobile ? 'none' : '80rem',
+    maxHeight: isMobile ? 'none' : '90vh',
     backgroundColor: 'white',
-    borderRadius: '1rem',
-    boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
+    borderRadius: isMobile ? '0' : '1rem',
+    boxShadow: isMobile ? 'none' : '0 25px 50px -12px rgba(0, 0, 0, 0.25)',
     overflow: 'hidden'
   };
-
-  const modalStyleMobile = {
-    position: 'relative',
-    width: '100vw',
-    height: '100vh',
-    maxWidth: 'none',
-    maxHeight: 'none',
-    backgroundColor: 'white',
-    borderRadius: '0',
-    boxShadow: 'none',
-    overflow: 'hidden'
-  };
-
-  const isMobile = window.innerWidth <= 768;
 
   const demoNoticeStyle = {
     background: 'linear-gradient(to right, #0097B2, #007a94)',
